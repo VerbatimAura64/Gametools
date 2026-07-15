@@ -1,0 +1,11 @@
+{
+    "name": "Lighthouseproductions.Gametools.Tests",
+    "references": [
+        "Lighthouseproductions.Gametools"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
