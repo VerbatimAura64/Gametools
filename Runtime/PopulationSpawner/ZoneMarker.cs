@@ -15,6 +15,7 @@ namespace Harborview.GameTools
         [UnityEngine.Range(0.8f, 1f)] public float camouflageTightness;
         public StoryFragment fragment;
         public StoryFragment failFragment;
+        public Vector3 planeSize;
 
         [HideInInspector] public List<GameObject> spawnedInstances = new();
         //[HideInInspector] 

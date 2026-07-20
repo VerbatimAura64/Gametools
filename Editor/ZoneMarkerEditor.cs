@@ -13,9 +13,10 @@ namespace Harborview.GameTools
 
             ZoneMarker zone = (ZoneMarker)target;
             int spawnNum = zone.spawnPointMax;
+            Vector3 planeSize = zone.planeSize;
             if (GUILayout.Button("Create and Populate Spawns"))
             {
-                CreateSpawns(zone, spawnNum);
+                CreateSpawns(zone, spawnNum, planeSize);
             }
             if (GUILayout.Button("Clear Spawns"))
             {
@@ -32,17 +33,17 @@ namespace Harborview.GameTools
 
         }
 
-        private void CreateSpawns(ZoneMarker zone, int spawnNum)
+        private void CreateSpawns(ZoneMarker zone, int spawnNum, Vector3 planeSize)
         {
             ClearSpawns(zone);
-            Vector3 planeSize = new Vector3(25, 0, 25);
+            Vector3 plane = planeSize;
             zone.spawnPoints = new Transform[spawnNum];
 
 
             for (int i = 0; i < spawnNum; i++)
             {
-                float randomX = Random.Range(-planeSize.x / 2, planeSize.x / 2);
-                float randomY = Random.Range(-planeSize.z / 2, planeSize.z / 2);
+                float randomX = Random.Range(-plane.x / 2, plane.x / 2);
+                float randomY = Random.Range(-plane.z / 2, plane.z / 2);
                 Vector3 spawnPosition = new Vector3(randomX, 0, randomY);
                 Transform instance = new GameObject("Spawnpoint").transform;
                 instance.position = spawnPosition;
