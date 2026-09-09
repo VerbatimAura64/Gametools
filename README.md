@@ -2,6 +2,8 @@
 
 Reusable Unity package containing a first-person character controller and an editor-time population/hide-and-seek spawner tool. Built originally for a Synty 12th Birthday Jam entry, packaged for reuse across future prototypes and jams.
 
+**[Read the case study](https://verbatimaura64.github.io/case_study/gametools.html)**
+
 ## Contents
 
 - **Character Controller** (`Runtime/CharacterController/`) — first-person movement, mouse look, sprint, gravity, and animation blend-tree driving via the new Input System.
